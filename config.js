@@ -5,6 +5,9 @@ if(process.env.NODE_ENV !== "production"){
 DATABASE_URL = "mongodb+srv://" + process.env.DB_USERNAME + ":" +
  encodeURIComponent(process.env.DB_PASSWORD) + "@" + process.env.DB_CLUSTER + ".mongodb.net/urlxs?retryWrites=true&w=majority";
 
+BASE_URL = process.env.HOST + ":" + process.env.PORT;
+
 module.exports = {
-  DATABASE_URL: DATABASE_URL
+  DATABASE_URL,
+  BASE_URL
 };

@@ -21,7 +21,12 @@ const connectDB = async() => {
 
 connectDB();
 
+app.use(express.static("static"));
+
 app.use(express.json({extended: false}));
+
+app.use('/', require('./routes/index.js'));
+app.use('/api', require('./routes/api.js'));
 
 app.listen(PORT, HOST);
 console.log(`Server is running on port ${HOST}:${PORT}...`);
