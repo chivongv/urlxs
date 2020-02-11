@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-const PORT = process.env.BASE_PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const HOST = process.env.BASE_HOST || "0.0.0.0";
 
 const connectDB = async() => {
