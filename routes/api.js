@@ -19,7 +19,7 @@ router.post("/shorten", async (req, res) => {
   const urlCode = shortid.generate();
 
   try {
-    let url = await Url.findOne();
+    let url = await Url.findOne({ longUrl });
     if(url) res.json(url)
     else {
       const shortUrl = BASE_URL + "/" + urlCode;
