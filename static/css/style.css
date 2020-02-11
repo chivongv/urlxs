@@ -36,6 +36,7 @@ input {
   font-size: 1rem;
   padding: .5rem;
   line-height: 1.5;
+  width: 400px;
 }
 
 #myForm {
@@ -47,5 +48,5 @@ input {
 }
 
 .form-group {
-  width: 500px;
+  width: 600px;
 }
